@@ -1314,7 +1314,7 @@ function scroll_cord_y() /* カーソル位置 横 y 座標算出 */
 	}
 function procerrchar(g,nChar) /* エラー入力文字処理 */
 	{
-		if(' '<=nChar&&nChar<='z')/* エラー入力文字が表示可能文字の場合 */
+		if((' '<=nChar&&nChar<='~')||(nChar=='\\'))/* エラー入力文字が表示可能文字の場合 */
 		{
 			disperror3(g,1); /* 前回エラー入力文数表示を消去 */
 			MIKA_type_err_count++; /* エラー入力文字数カウンターをインクリメント */
